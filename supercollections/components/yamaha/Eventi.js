@@ -2,44 +2,40 @@ import Image from "next/image";
 
 export default function Eventi() {
   return (
-    <div className="relative flex flex-col md:block xl:flex xl:flex-col group cursor-pointer w-full overflow-hidden">
+    /* h-[400px] o aspect-video definiscono l'altezza della card da md in su */
+    <div className="relative flex flex-col group cursor-pointer w-full overflow-hidden bg-white shadow-sm border border-gray-200 md:aspect-video md:h-auto">
       
       {/* IMMAGINE */}
-      <div className="relative w-full aspect-[16/10] md:absolute md:inset-0 md:h-full xl:relative xl:h-auto xl:aspect-[16/10]">
+      <div className="relative w-full aspect-video md:aspect-none md:absolute md:inset-0 md:h-full">
         <Image
           src="/images/yamaha.jpg"
-          alt=""
+          alt="Evento"
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        {/* Overlay: visibile solo quando il testo è sopra (md e lg), sparisce su xl */}
-        <div className="hidden md:block xl:hidden absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+        {/* Overlay: attivo da md in poi per garantire la leggibilità del testo bianco */}
+        <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
 
       {/* TESTI */}
-      <div className="flex flex-col p-5 md:absolute md:bottom-0 md:left-0 md:w-full md:p-8 md:text-white xl:relative xl:p-5 xl:text-black">
-        
-        {/* Data o Sottotitolo piccolo */}
-        <p className="text-[10px] font-bold uppercase tracking-widest mb-2 opacity-70">
-          09 — 15 Mar 2026 • Concessionarie"
-        </p>
-        
-        {/* Titolo Principale */}
-        <h2 className="text-xl md:text-3xl xl:text-2xl font-black uppercase leading-tight mb-3">
-          You Selected Occasion Week
+      {/* Su mobile: relativo e testo nero. Da MD: assoluto in basso e testo bianco */}
+      <div className="relative z-10 flex flex-col p-6 md:absolute md:bottom-0 md:left-0 md:w-full md:text-white md:p-8">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-black uppercase leading-tight mb-2 text-black md:text-white">
+          You Selected <br className="hidden md:block" /> Occasion Week
         </h2>
-        
-        {/* Descrizione: la nascondiamo su MD per non coprire troppo l'immagine, la mostriamo su XL */}
-        <p className="text-sm leading-relaxed mb-6 line-clamp-2 md:hidden xl:block opacity-80">
-          Scopri le migliori occasioni selezionate per te presso i nostri centri ufficiali.
-        </p>
 
-        {/* Link/Bottone */}
-        <div className="flex items-center gap-2 group/link">
-          <span className="text-xs font-bold uppercase border-b-2 border-transparent group-hover/link:border-current transition-all">
+        <div className="flex items-center gap-2 mt-2">
+          <span className="text-xs font-bold uppercase border-b-2 border-black md:border-white">
             Scopri di più
           </span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-3 h-3 transform transition-transform group-hover/link:translate-x-1">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            strokeWidth={3} 
+            stroke="currentColor" 
+            className="w-4 h-4 transform transition-transform group-hover:translate-x-1"
+          >
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
         </div>
