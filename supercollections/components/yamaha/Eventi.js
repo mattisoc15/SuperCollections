@@ -1,12 +1,7 @@
 import Image from "next/image";
 
-export default function CardEsplora({ src, titolo, sottotitolo, descrizione, data }) {
+export default function Eventi() {
   return (
-    /* CONTENITORE: 
-       - Default (Mobile): Flex column (testo sotto)
-       - md: Block (permette il posizionamento absolute del testo sopra)
-       - xl: Flex column (ritorna testo sotto)
-    */
     <div className="relative flex flex-col md:block xl:flex xl:flex-col group cursor-pointer w-full overflow-hidden">
       
       {/* IMMAGINE */}
