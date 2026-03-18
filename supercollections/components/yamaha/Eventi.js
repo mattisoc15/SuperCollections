@@ -4,7 +4,6 @@ export default function Eventi() {
   return (
     /* h-[400px] o aspect-video definiscono l'altezza della card da md in su */
     <div className="relative flex flex-col group cursor-pointer w-full overflow-hidden bg-white shadow-sm border border-gray-200 md:aspect-video md:h-auto">
-      
       {/* IMMAGINE */}
       <div className="relative w-full aspect-video md:aspect-none md:absolute md:inset-0 md:h-full">
         <Image
@@ -28,15 +27,19 @@ export default function Eventi() {
           <span className="text-xs font-bold uppercase border-b-2 border-black md:border-white">
             Scopri di più
           </span>
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            strokeWidth={3} 
-            stroke="currentColor" 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={3}
+            stroke="currentColor"
             className="w-4 h-4 transform transition-transform group-hover:translate-x-1"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+            />
           </svg>
         </div>
       </div>

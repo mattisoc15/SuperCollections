@@ -6,6 +6,7 @@ import Esplora from "@/components/yamaha/Esplora";
 import Eventi from "@/components/yamaha/Eventi";
 import Banner2 from "@/components/yamaha/Banner2";
 import Banner3 from "@/components/yamaha/Banner3";
+import Eventi2 from "@/components/yamaha/Eventi2";
 
 export default function Home() {
   return (
@@ -45,22 +46,32 @@ export default function Home() {
           <Eventi />
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-x-6 gap-y-12 mt-10">
-        {/* Ogni card deve avere una larghezza definita per "simulare" le colonne */}
-        <div className="w-[calc(50%-1.5rem)] md:w-[calc(25%-1.5rem)] xl:w-[calc(16.66%-1.5rem)]">
+      <div className="flex flex-wrap justify-center gap-6 mt-10">
+        {/* Applica queste classi a ogni card */}
+        <div className="w-1/2 md:w-1/4 xl:w-1/6">
           <Esplora />
         </div>
-        <div className="w-[calc(50%-1.5rem)] md:w-[calc(25%-1.5rem)] xl:w-[calc(16.66%-1.5rem)]">
+        <div className="w-1/2 md:w-1/4 xl:w-1/6">
           <Esplora />
         </div>
-        <div className="w-[calc(50%-1.5rem)] md:w-[calc(25%-1.5rem)] xl:w-[calc(16.66%-1.5rem)]">
+        <div className="w-1/2 md:w-1/4 xl:w-1/6">
           <Esplora />
         </div>
       </div>
+      <div className="flex justify-between items-end mb-8 mt-10">
+        <h2 className="text-3xl font-bold uppercase tracking-tighter">
+          Prossimi Eventi
+        </h2>
+        <a href="#" className="text-sm font-semibold hover:underline">
+          Visualizza tutto →
+        </a>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 px-4">
+        <Eventi2 />
+        <Eventi2 />
+        <Eventi2 />
+      </div>
 
-
-
-      
       <div className="mt-12 md:mt-24 px-6 md:px-12 xl:px-20 max-w-[1700px] mx-auto">
         <Banner3 />
       </div>
