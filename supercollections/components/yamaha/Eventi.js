@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Eventi() {
+export default function Eventi(props) {
   return (
     /* h-[400px] o aspect-video definiscono l'altezza della card da md in su */
     <div className="relative flex flex-col group cursor-pointer w-full overflow-hidden bg-white shadow-sm border border-gray-200 md:aspect-video md:h-auto">
@@ -20,7 +20,7 @@ export default function Eventi() {
       {/* Su mobile: relativo e testo nero. Da MD: assoluto in basso e testo bianco */}
       <div className="relative z-10 flex flex-col p-6 md:absolute md:bottom-0 md:left-0 md:w-full md:text-white md:p-8">
         <h2 className="text-xl md:text-2xl lg:text-3xl font-black uppercase leading-tight mb-2 text-black md:text-white">
-          You Selected <br className="hidden md:block" /> Occasion Week
+          {props.titolo}
         </h2>
 
         <div className="flex items-center gap-2 mt-2">

@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-export default function Ogetti() {
+export default function Ogetti(props) {
   return (
     <div className="flex flex-col w-full group cursor-pointer">
       {/* Immagine con proporzione fissa (Rettangolare come in figura) */}
       <div className="relative w-full aspect-[4/3] mb-4 overflow-hidden">
         <Image
-          src="/images/full.png"
+          src={props.immagine}
           alt=""
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -15,7 +15,7 @@ export default function Ogetti() {
 
       {/* Testo Titolo */}
       <h3 className="text-lg md:text-xl font-bold text-gray-900 leading-tight mb-3">
-        Insieme in ogni avventura
+        {props.titolo}
       </h3>
 
       {/* Link "Scopri" con Freccia */}

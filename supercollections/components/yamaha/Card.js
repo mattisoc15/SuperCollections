@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Card() {
+export default function Card(props) {
   return (
     /* MOBILE & MD: flex-col (testo sotto)
        LG+: block con altezza fissa (testo dentro)
@@ -13,7 +13,7 @@ export default function Card() {
       */}
       <div className="relative w-full aspect-[16/10] lg:absolute lg:inset-0 lg:h-full lg:aspect-auto">
         <Image
-          src="/images/moti.webp"
+          src={props.immagine}
           alt="Titolo"
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -28,17 +28,15 @@ export default function Card() {
       */}
       <div className="flex flex-col p-6 lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:p-10 lg:text-white">
         <p className="text-[11px] font-bold text-gray-500 lg:text-white/80 uppercase tracking-[0.2em] mb-2">
-          La rata su misura accende la strada
+          {props.paragrafo}
         </p>
 
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black uppercase mb-4 leading-tight">
-          Vantaggi Moto <br className="hidden lg:block" /> e Scooter
+          {props.titolo}
         </h2>
 
         <p className="text-gray-600 lg:text-white/90 text-[15px] leading-relaxed mb-8 max-w-md">
-          Adrenalina, libertà e prestazioni per chi ama guidare senza limiti.
-          Agilità, comfort e praticità per chi vuole muoversi velocemente in
-          città.
+          {props.paragrafo2}
         </p>
 
         {/* BOTTONE: Bordo nero su mobile, bianco su LG+ */}

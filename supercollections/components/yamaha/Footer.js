@@ -1,21 +1,35 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-[#121212] text-white px-6 py-10 font-sans">
       <div className="max-w-7xl mx-auto">
-        {/* Accordion / Menu Sezioni */}
+        {/* Sezioni Menu - Accordion statico */}
         <div className="border-t border-gray-800">
-          {["CORPORATE", "B2B", "PIÙ YAMAHA", "SUPPORTO"].map((item) => (
-            <div
-              key={item}
-              className="flex justify-between items-center py-5 border-b border-gray-800 cursor-pointer hover:bg-white/5 px-2"
-            >
-              <span className="font-bold tracking-tighter text-lg">{item}</span>
-              <span className="text-2xl font-light">+</span>
-            </div>
-          ))}
+          <div className="flex justify-between items-center py-5 border-b border-gray-800 cursor-pointer hover:bg-white/5 px-2">
+            <span className="font-bold tracking-tighter text-lg uppercase">
+              Corporate
+            </span>
+            <span className="text-2xl font-light">+</span>
+          </div>
+          <div className="flex justify-between items-center py-5 border-b border-gray-800 cursor-pointer hover:bg-white/5 px-2">
+            <span className="font-bold tracking-tighter text-lg uppercase">
+              B2B
+            </span>
+            <span className="text-2xl font-light">+</span>
+          </div>
+          <div className="flex justify-between items-center py-5 border-b border-gray-800 cursor-pointer hover:bg-white/5 px-2">
+            <span className="font-bold tracking-tighter text-lg uppercase">
+              Più Yamaha
+            </span>
+            <span className="text-2xl font-light">+</span>
+          </div>
+          <div className="flex justify-between items-center py-5 border-b border-gray-800 cursor-pointer hover:bg-white/5 px-2">
+            <span className="font-bold tracking-tighter text-lg uppercase">
+              Supporto
+            </span>
+            <span className="text-2xl font-light">+</span>
+          </div>
         </div>
 
         {/* Newsletter Section */}
@@ -43,24 +57,36 @@ export default function Footer() {
           </form>
         </div>
 
-        {/* Language Selector */}
-        <div className="mt-10">
-          <button className="flex items-center gap-2 border border-gray-700 bg-gray-900/50 px-4 py-2 rounded-md">
-            <span className="text-sm">🇮🇹 Italy (Italian)</span>
-          </button>
-        </div>
+        {/* Container Flex per Lingua e Social */}
+        <div className="mt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+          {/* Language Selector */}
+          <div className="shrink-0">
+            <button className="flex items-center gap-2 border border-gray-700 bg-gray-900/50 px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">
+              <span className="text-sm">🇮🇹 Italy (Italian)</span>
+            </button>
+          </div>
 
-        {/* Social Icons - Layout Circolare */}
-        <div className="flex flex-wrap gap-3 mt-10">
-          {/* Sostituisci i div con le tue icone effettive o Image */}
-          {["ig", "fb", "tk", "in", "wa", "yt"].map((social) => (
-            <div
-              key={social}
-              className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center hover:bg-gray-700 cursor-pointer uppercase text-[10px] font-bold"
-            >
-              {social}
+          {/* Social Icons */}
+          <div className="flex flex-wrap gap-3">
+            <div className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center hover:bg-gray-700 cursor-pointer text-[10px] font-bold uppercase transition-colors">
+              IG
             </div>
-          ))}
+            <div className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center hover:bg-gray-700 cursor-pointer text-[10px] font-bold uppercase transition-colors">
+              FB
+            </div>
+            <div className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center hover:bg-gray-700 cursor-pointer text-[10px] font-bold uppercase transition-colors">
+              TK
+            </div>
+            <div className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center hover:bg-gray-700 cursor-pointer text-[10px] font-bold uppercase transition-colors">
+              IN
+            </div>
+            <div className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center hover:bg-gray-700 cursor-pointer text-[10px] font-bold uppercase transition-colors">
+              WA
+            </div>
+            <div className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center hover:bg-gray-700 cursor-pointer text-[10px] font-bold uppercase transition-colors">
+              YT
+            </div>
+          </div>
         </div>
 
         {/* Bottom Footer */}

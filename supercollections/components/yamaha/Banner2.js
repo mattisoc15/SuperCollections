@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Banner2() {
+export default function Banner2(props) {
   return (
     <div className="w-full">
       {/* Titolo SOPRA l'immagine - Margine pulito */}
@@ -12,7 +12,7 @@ export default function Banner2() {
       {/* Box Immagine - Altezza ridotta (verticale stretto) */}
       <section className="relative w-full h-[30vh] md:h-[35vh] overflow-hidden bg-gray-900 group">
         <Image
-          src="/images/moto.webp"
+          src={props.immagine}
           alt="Yamaha Test Ride"
           fill
           priority

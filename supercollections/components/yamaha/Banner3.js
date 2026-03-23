@@ -8,7 +8,7 @@ export default function Banner3() {
       {/* L'ordine HTML è invertito usando order-first/last o semplicemente spostando i div */}
       <div className="relative w-full xl:w-[60%] h-[300px] md:h-[450px] xl:h-[600px] xl:order-2">
         <Image
-          src="/images/moto.webp"
+          src="/images/DYM.jpg"
           alt="Destination Yamaha Motor"
           fill
           priority
