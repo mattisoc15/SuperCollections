@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
         <Link href="/">
           <img
-            src="images/logo.png"
+            src="/images/yamaha/logo.png"
             alt="Logo"
             className="h-8 md:h-10 w-auto object-contain"
           />
