@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Banner() {
+export default function Navbar() {
   return (
-    <div className="bg-[#8b225c] text-white py-2 px-4 md:px-8 flex flex-col xl:flex-row justify-between items-center text-[10px] md:text-xs font-medium tracking-wide">
+    <div className="bg-[#8b225c] text-white py-2 px-4 md:px-8 flex flex-row justify-between items-center text-[10px] md:text-xs font-medium tracking-wide">
       
-      {/* Sezione Lingue (Sinistra) */}
-      <div className="flex gap-2 mb-2 xl:mb-0">
+      {/* Sezione Lingue (Sinistra) - Sempre visibile */}
+      <div className="flex gap-2">
         <span className="cursor-pointer hover:opacity-80 transition">IT</span> / 
         <span className="cursor-pointer hover:opacity-80 transition">EN</span> / 
         <span className="cursor-pointer hover:opacity-80 transition">DE</span> / 
@@ -14,23 +15,23 @@ export default function Banner() {
         <span className="cursor-pointer hover:opacity-80 transition">PL</span>
       </div>
 
-      {/* Sezione Destra (Contatti + Social) */}
-      <div className="flex flex-col md:flex-row items-center gap-4 xl:gap-8">
+      {/* Sezione Destra */}
+      <div className="flex items-center gap-4 xl:gap-8">
         
-        {/* Contatti */}
-        <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center">
+        {/* Contatti: NASCOSTI di base, VISIBILI solo da XL in su */}
+        <div className="hidden xl:flex items-center gap-4">
           <p>
             Servizi Professionali: <a href="mailto:info@dogedivenezia.it" className="hover:underline">info@dogedivenezia.it</a> - +39 041 530 23 63
           </p>
-          <span className="hidden md:block opacity-50">|</span>
+          <span className="opacity-50">|</span>
           <p>
             Escursioni Giornaliere: <a href="mailto:api@dogedivenezia.it" className="hover:underline">api@dogedivenezia.it</a> / +39 041 530 23 63
           </p>
         </div>
 
-        {/* Social con icone SVG manuali */}
+        {/* Social - Sempre visibili */}
         <div className="flex items-center gap-3">
-          <span className="font-bold">Social:</span>
+          <span className="font-bold hidden sm:inline">Social:</span>
           <div className="flex gap-2">
             
             {/* Facebook */}
