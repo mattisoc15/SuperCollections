@@ -5,46 +5,23 @@ import Testo from "@/components/doge/Testo";
 import Card from "@/components/doge/Card";
 import Card2 from "@/components/doge/Card2";
 import Testo2 from "@/components/doge/Testo2";
+import Banner2 from "@/components/doge/Banner2";
+import Footer from "@/components/doge/Footer";
 
-export default function Home() {
+export default function Doge() {
   return (
     <>
       <Navbar />
       <Navbar2 />
       <Banner />
       <Testo />
-      
+
       <section className="w-full px-4 md:px-12 py-10 bg-gray-50">
         <div className="flex gap-6 overflow-x-auto pb-10 snap-x snap-mandatory scrollbar-hide">
-          <Card 
-            immagine="/images/doge/burano.jpg" 
-            titolo="Tour giornaliero in barca da Fusina: Murano, Burano e Torcello con guida a bordo e tempo libero"
-            partenza="Fusina"
-            durata="8h 30min"
-            disponibilita="Disponibile"
-            prezzo="45,00"
-            mostraBadge={false}
-          />
+          <Card dati={daticard} />
+          <Card dati={daticard2} />
 
-          <Card 
-            immagine="/images/doge/murano.jpg"
-            titolo="Tour in barca da Venezia: Murano e Burano con dimostrazione del vetro e tempo libero"
-            partenza="venezzia"
-            durata="4h 50min"
-            disponibilita="Disponibile"
-            prezzo="25,00"
-            mostraBadge={false}
-          />
-
-          <Card 
-            immagine="/images/doge/canale.jpg"
-            titolo="Venezia dall'acqua: Un brindisi alla bellezza"
-            partenza="Venezia"
-            durata="1h 15min"
-            disponibilita="Disponibile"
-            prezzo="25,00"
-            mostraBadge={false}
-          />
+          <Card dati={daticard3} />
         </div>
       </section>
 
@@ -52,33 +29,78 @@ export default function Home() {
 
       <section className="w-full px-4 md:px-12 py-16 bg-gray-50">
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-          
-          <Card2 
+          <Card2
             iconSrc="/images/doge/telefono.png"
             title="Prenotazione Istantanea"
             description="Prenota il tuo tour a Venezia in pochi click, senza attese."
           />
 
-          <Card2 
+          <Card2
             iconSrc="/images/doge/soldi.png"
             title="Miglior Prezzo Garantito"
             description="Offriamo i migliori prezzi per un'esperienza indimenticabile."
           />
 
-          <Card2 
+          <Card2
             iconSrc="/images/doge/carta.png"
             title="Pagamenti 100% Sicuri"
             description="Goditi il tuo tour con pagamenti sicuri e affidabili."
           />
 
-          <Card2 
+          <Card2
             iconSrc="/images/doge/ponte.png"
             title="Del Territorio"
             description="Veneziani da generazioni: passione e amore per la città."
           />
-
         </div>
       </section>
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-4 max-w-7xl mx-auto">
+        <Banner2
+          titolo="Matrimonio"
+          sottotitolo="a Bordo"
+          descrizione="Scopri il fascino di Venezia in un modo unico e romantico con il nostro servizio..."
+          testoBottone="Scopri di più"
+          src="/images/doge/matrimonio.jpg"
+        />
+
+        <Banner2
+          titolo="Giorno"
+          sottotitolo="di Festa"
+          descrizione="Organizza una festa indimenticabile con il nostro servizio Festa Privata a Venezia. Che si tratti di un compleanno, un anniversario o qualsiasi altra occasione speciale,"
+          testoBottone="Scopri di più"
+          src="/images/doge/aperitivo.png"
+        />
+      </div>
+      <Footer></Footer>
     </>
   );
 }
+
+const daticard = {
+  immagine: "/images/doge/burano.jpg",
+  titolo:
+    "Tour giornaliero in barca da Fusina: Murano, Burano e Torcello con guida a bordo e tempo libero",
+  partenza: "Fusina",
+  durata: "8h 30min",
+  disponibilita: "Disponibile",
+  prezzo: "45,00",
+};
+
+const daticard2 = {
+  immagine: "/images/doge/murano.jpg",
+  titolo:
+    "Tour in barca da Venezia: Murano e Burano con dimostrazione del vetro e tempo libero",
+  partenza: "venezzia",
+  durata: "4h 50min",
+  disponibilita: "Disponibile",
+  prezzo: "25,00",
+};
+
+const daticard3 = {
+  immagine: "/images/doge/canale.jpg",
+  titolo: "Venezia dall'acqua: Un brindisi alla bellezza",
+  partenza: "Venezia",
+  durata: "1h 15min",
+  disponibilita: "Disponibile",
+  prezzo: "25,00",
+};
