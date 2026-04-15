@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Card({ dati }) {
   return (
     // Il flex-shrink-0 è fondamentale qui per non far schiacciare la card
-    <div className="w-[300px] md:w-[380px] flex-shrink-0 snap-start flex flex-col group cursor-pointer">
+    <div className="w-[300px] md:w-[380px] flex-shrink-0 snap-start flex flex-col group cursor-pointer scroll-ml-6">
       <div className="relative aspect-square w-full bg-[#f6f6f6] overflow-hidden">
         {dati.isItaly && (
           <div className="absolute top-4 left-4 z-10 w-6 h-6">

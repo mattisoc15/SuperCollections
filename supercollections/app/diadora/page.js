@@ -4,6 +4,7 @@ import Pulsantiera from "@/components/diadora/Pulsantiera";
 import Card from "@/components/diadora/Card";
 import CardSemplice from "@/components/diadora/cardSemplice";
 import Servizi from "@/components/diadora/Servizi";
+import Footer from "@/components/diadora/Footer";
 import Image from "next/image";
 
 export default function Diadora() {
@@ -48,7 +49,7 @@ export default function Diadora() {
 
       <section className="w-full py-12">
         {/* Contenitore dello scroll */}
-        <div className="flex gap-4 overflow-x-auto px-4 md:px-12 pb-10 snap-x snap-mandatory no-scrollbar">
+        <div className="flex gap-4 overflow-x-auto px-4 md:px-12 pb-10 snap-x snap-mandatory ">
           <Card dati={scarpa1} />
           <Card dati={scarpa2} />
           <Card dati={scarpa3} />
@@ -66,7 +67,7 @@ export default function Diadora() {
 
         {/* Metodo Scroll Orizzontale */}
         <div 
-          className="flex gap-8 md:gap-16 overflow-x-auto px-8 md:px-20 pb-10 snap-x snap-mandatory no-scrollbar justify-start md:justify-center"
+          className="flex gap-8 md:gap-16 overflow-x-auto px-8 md:px-20 pb-10 snap-x snap-mandatory justify-start md:justify-center"
         >
           <CardSemplice dati={classico1} />
           <CardSemplice dati={classico2} />
@@ -104,6 +105,7 @@ export default function Diadora() {
         </div>
       </section>
       <Servizi></Servizi>
+      <Footer></Footer>
       </div>
     </>
   );
