@@ -2,7 +2,7 @@ import Navbar from "@/components/diadora/Navbar";
 import Banner from "@/components/diadora/Banner";
 import Pulsantiera from "@/components/diadora/Pulsantiera";
 import Card from "@/components/diadora/Card";
-import CardSemplice from "@/components/diadora/cardSemplice";
+import CardSemplice from "@/components/diadora/CardSemplice";
 import Servizi from "@/components/diadora/Servizi";
 import Footer from "@/components/diadora/Footer";
 import Image from "next/image";
