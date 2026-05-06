@@ -2,7 +2,7 @@ import Image from "next/image";
 import Navbar from "@/components/montblanc/Navbar";
 import Banner from "@/components/montblanc/Banner";
 import Oggetti from "@/components/montblanc/Oggetti";
-import Card from "@/components/montblanc/Categorie";
+import Categorie from "@/components/montblanc/Categorie";
 import BannerMamma from "@/components/montblanc/BannerMamma";
 import FeaturedGrid from "@/components/montblanc/FeaturedGrid";
 import ViaggioIndimenticabile from "@/components/montblanc/ViaggioIndimenticabile";
@@ -15,7 +15,7 @@ export default function Diadora() {
       <Navbar />
       <Banner />
       <Oggetti items={prodotti} />
-      <Card categorie={categorieMontblanc} />
+      <Categorie categorie={categorieMontblanc} />
       <BannerMamma />
       <FeaturedGrid items={prodottiMatisse} />
       <ViaggioIndimenticabile items={prodottiViaggio} />

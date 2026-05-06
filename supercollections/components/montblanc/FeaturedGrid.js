@@ -2,12 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function FeaturedGrid({ items }) {
-  // Esempio struttura items:
-  // [
-  //   { id: 1, titolo: "HOMAGE TO HENRI MATISSE", desc: "Scopri la collezione...", btnText: "Esplora...", src: "/matisse.jpg" },
-  //   { id: 2, titolo: "OROLOGI DI PREGIO", desc: "Ti sveliamo i nostri...", btnText: "Scopri", src: "/orologi.jpg" }
-  // ]
-
   return (
     <section className="bg-white py-12 px-6">
       <div className="max-w-[1800px] mx-auto">
